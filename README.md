@@ -51,4 +51,4 @@ API response object will be as follows:
 
  "similarity-distance":[list of the similarity distance between the user requested in the API call and other users]}
 
- ]}```
+ ]}
