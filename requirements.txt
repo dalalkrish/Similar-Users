@@ -2,7 +2,6 @@ pandas
 numpy
 scikit-learn
 flask
-json
 flask_restful
 scipy
 sqlalchemy
