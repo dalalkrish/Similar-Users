@@ -18,9 +18,11 @@ Refer `conceptualize.ipynb` for the details on implementation
   - Clone this project from https://github.com/dalalkrish/Similar-Users.git and `cd` into it.
 
   - Create a virtual environment using following command:
+
     `conda create -n <environment-name> python=3.6`
 
   - Install necessary packages listed in `requirements.txt` using following command:
+  
     `pip install -r requirements.txt`
 
   - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002
@@ -28,5 +30,6 @@ Refer `conceptualize.ipynb` for the details on implementation
 To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-handle>` using a browser or Postman from Google Chrome web store. You can also send the GET request from python script using Python's `request` module.
 
 API response object will be as follows:
+
 `{"similar-users-for":user_handle, "result": [{"user_handle":[list of similar user's user handle], "course_tags":[list of course tags of the user handle], "level": [list of course difficulty levels], "interest_tag":[list of interest tags of the user handle],
 "assessment_tag": [list of course assessment tag if known for the user or "Not Available"], "mean_view_time":[list of user's average course view time], "mean_assessment_score":[list of user's average assessment score if assessment tag know or 0], "similarity-distance":[list of the similarity distance between the user requested in the API call and other users]}]}`
