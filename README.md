@@ -17,7 +17,7 @@ Refer `conceptualize.ipynb` for the details on implementation.
 
   - Clone this project from https://github.com/dalalkrish/Similar-Users.git and `cd` into it.
 
-  - Create a virtual environment using following command:
+  - Create a virtual environment using following command. Follow the instruction on the screen for activating and deactivating the    virtual environment.
 
     `conda create -n <environment-name> python=3.6`
 

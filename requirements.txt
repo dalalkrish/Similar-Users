@@ -1,7 +1,6 @@
 pandas
 numpy
 scikit-learn
-flask==0.12.2
-pickle
+flask
 json
 sqlalchemy
