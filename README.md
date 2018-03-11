@@ -31,7 +31,7 @@ To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-h
 
 API response object will be as follows:
 
-`{
+```{
 
 "similar-users-for":user_handle, "result": [
 
@@ -51,6 +51,4 @@ API response object will be as follows:
 
  "similarity-distance":[list of the similarity distance between the user requested in the API call and other users]}
 
- ]
-
- }`
+ ]}```
