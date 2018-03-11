@@ -15,7 +15,7 @@ Refer `conceptualize.ipynb` for the details on implementation.
 
   - Use `Anaconda3` for `Python` and `Python Package` management.
 
-  - Clone this project from https://github.com/dalalkrish/Similar-Users.git and `cd` into it.
+  - Clone this project from https://github.com/dalalkrish/Similar-Users.git using `git clone https://github.com/dalalkrish/Similar-Users.git` and then `cd Similar-Users` into it.
 
   - Create a virtual environment using following command. Follow the instruction on the screen for activating and deactivating the    virtual environment.
 
@@ -23,7 +23,7 @@ Refer `conceptualize.ipynb` for the details on implementation.
 
   - Install necessary packages listed in `requirements.txt` using following command:
 
-    `pip install -r requirements.txt`
+    `pip install -r requirements.txt -t lib`
 
   - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002.
 
