@@ -23,7 +23,7 @@ Refer `conceptualize.ipynb` for the details on implementation.
 
   - Install necessary packages listed in `requirements.txt` using following command:
 
-    `pip install -r requirements.txt -t lib`
+    `pip install -r requirements.txt`
 
   - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002.
 
