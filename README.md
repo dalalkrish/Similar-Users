@@ -31,7 +31,7 @@ To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-h
 
 API response object will be as follows:
 
-``{
+```{
 
 "similar-users-for":user_handle, "result": [
 
