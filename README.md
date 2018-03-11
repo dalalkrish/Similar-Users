@@ -27,7 +27,7 @@ Refer `conceptualize.ipynb` for the details on implementation.
 
   - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002.
 
-To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-handle>` using a browser or Postman from Google Chrome web store. To send GET request from python script use Python's `request` module and convert the response to pandas data frame. `curl` from the terminal. For example `curl http://0.0.0.0:5002/users/50`.
+To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-handle>` using a browser or Postman from Google Chrome web store. To send GET request from python script use Python's `request` module and convert the response to pandas data frame. `curl` from the terminal as `curl http://0.0.0.0:5002/users/50`.
 
 API response object will be as follows:
 
