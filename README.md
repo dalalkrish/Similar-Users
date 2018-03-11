@@ -13,17 +13,17 @@ Refer `conceptualize.ipynb` for the details on implementation
 
 ### Details on how to set up this project
 
-Use `Anaconda3` for `Python` and `Python Package` management
+  - Use `Anaconda3` for `Python` and `Python Package` management
 
-Clone this project from https://github.com/dalalkrish/Similar-Users.git and `cd` into it.
+  - Clone this project from https://github.com/dalalkrish/Similar-Users.git and `cd` into it.
 
-Create a virtual environment using following command:
-`conda create -n <environment-name> python=3.6`
+  - Create a virtual environment using following command:
+    `conda create -n <environment-name> python=3.6`
 
-Install necessary packages listed in `requirements.txt` using following command:
-`pip install -r requirements.txt`
+  - Install necessary packages listed in `requirements.txt` using following command:
+    `pip install -r requirements.txt`
 
-Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002
+  - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002
 
 To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-handle>` using a browser or Postman from Google Chrome web store. You can also send the GET request from python script using Python's `request` module.
 
