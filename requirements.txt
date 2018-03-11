@@ -3,4 +3,6 @@ numpy
 scikit-learn
 flask
 json
+flask_rest
+scipy
 sqlalchemy
