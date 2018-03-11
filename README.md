@@ -9,11 +9,11 @@ Similar-Users is an API implementation that identifies similar users based on th
   - Average user view time of the course based on the course tags
   - Average user assessment score if the user was enrolled before
 
-Refer `conceptualize.ipynb` for the details on implementation
+Refer `conceptualize.ipynb` for the details on implementation.
 
 ### Details on how to set up this project
 
-  - Use `Anaconda3` for `Python` and `Python Package` management
+  - Use `Anaconda3` for `Python` and `Python Package` management.
 
   - Clone this project from https://github.com/dalalkrish/Similar-Users.git and `cd` into it.
 
@@ -25,7 +25,7 @@ Refer `conceptualize.ipynb` for the details on implementation
 
     `pip install -r requirements.txt`
 
-  - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002
+  - Run server script using `python server.py` and the API should be listening at your host='0.0.0.0' and port=5002.
 
 To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-handle>` using a browser or Postman from Google Chrome web store. You can also send the GET request from python script using Python's `request` module.
 
