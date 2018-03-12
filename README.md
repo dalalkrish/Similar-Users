@@ -30,6 +30,7 @@ Refer `conceptualize.ipynb` for the details on implementation.
 To get the API response make a GET request to `http://0.0.0.0:5002/users/<user-handle>` using a browser or Postman from Google Chrome web store. To send GET request from python script use Python's `request` module and convert the response to pandas data frame. `curl` from the terminal as `curl http://0.0.0.0:5002/users/50`.
 
 **Note:**
+
 The current API implementation as part of the technical interview uses SQlite database to store only user activity data and not the engineered features used to calculate similarity distance since SQlite has limitations on number of variables inserted in the table. So whenever the GET request is made to the API, the API performs calculations before sending the response which would take few seconds.
 
 API response object will be as follows:
