@@ -52,3 +52,6 @@ API response object will be as follows:
  "similarity-distance":[list of the similarity distance between the user requested in the API call and other users]}
 
  ]}
+
+**Note:**
+The current API implementation as part of the technical interview uses SQlite database to store only user activity data and not the engineered features used to calculate similarity distance since SQlite has limitations on number of variables inserted in the table. So whenever the GET request is made to the API, the API performs calculations before sending the response which would take few seconds.
