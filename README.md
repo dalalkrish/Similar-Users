@@ -35,9 +35,9 @@ _The current API implementation as part of the technical interview uses SQlite d
 
 API response object will be as follows:
 
-```{
+```
 
-"similar-users-for":user_handle, "result": [
+{"similar-users-for":user_handle, "result": [
 
 {"user_handle":[list of similar user's user handle],
 
