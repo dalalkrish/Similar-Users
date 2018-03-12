@@ -35,22 +35,23 @@ def similarity_matrix(df, user):
 
 class Users(Resource):
     def get(self, user_id):
-        print("Request receieved for user handle %s" %(user_id))
-        ax = DatabaseWorker('users.db')
-        data = ax.query_table('user_activity')
-        print(data.shape)
-        similar_users, distance = similarity_matrix(data, int(user_id))
-        print("Matrix calculation completed")
-        data = data[data["user_handle"].isin(similar_users)]
-        m = dict(zip(similar_users, distance))
-        data["similarity_distance"] = data["user_handle"].map(lambda x: m.get(x, "Not Available"))
-        data = data.sort_values(["similarity_distance"], ascending=[False])
-        response = {"similar-users-for":user_id, "result": [data.to_dict('list')]}
-        print("Done!")
-        return jsonify(response)
-        # except Exception as e:
-        #     print(e)
-        #     return jsonify({'error-msg':'Please try another user handle'})
+        try:
+            print("Request receieved for user handle %s" %(user_id))
+            ax = DatabaseWorker('users.db')
+            data = ax.query_table('user_activity')
+            print(data.shape)
+            similar_users, distance = similarity_matrix(data, int(user_id))
+            print("Matrix calculation completed")
+            data = data[data["user_handle"].isin(similar_users)]
+            m = dict(zip(similar_users, distance))
+            data["similarity_distance"] = data["user_handle"].map(lambda x: m.get(x, "Not Available"))
+            data = data.sort_values(["similarity_distance"], ascending=[False])
+            response = {"similar-users-for":user_id, "result": [data.to_dict('list')]}
+            print("Done!")
+            return jsonify(response)
+        except Exception as e:
+            print(e)
+            return jsonify({'error-msg':'Please try another user handle'})
 
 api.add_resource(Users, '/users/<user_id>')
 if __name__ == "__main__":
