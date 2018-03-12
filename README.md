@@ -33,7 +33,7 @@ To get the API response make a GET request to `http://127.0.0.1:5000/users/<user
 
 _The current API implementation as part of the technical interview uses SQlite database to store only user activity data and not the engineered features used to calculate similarity distance since SQlite has limitations on number of variables inserted in the table. So whenever the GET request is made to the API, the API performs calculations before sending the response which would take few seconds._
 
-API response object will be as follows:
+API will response the users and their activity along with the similarity distance from the user requested in the API call. API response object will be as follows:
 
 ```
 
