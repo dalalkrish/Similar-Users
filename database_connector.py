@@ -7,9 +7,7 @@ Created on Mon Mar  5 10:46:38 2018
 
 import sqlite3
 import pandas as pd
-from pandas.io import sql
-import numpy as np
-from sklearn.metrics.pairwise import cosine_similarity
+
 
 class DatabaseWorker(object):
     def __init__(self, db_name):
@@ -38,19 +36,8 @@ class DatabaseWorker(object):
         cur.execute(q)
         # row = cur.fetchall()
         row = pd.read_sql_query(q, conn)
+        conn.close()
         return row
-
-    def query_table1(self, table_name, user_handle):
-        conn = sqlite3.connect(self.db)
-        cur = conn.cursor()
-        q = "SELECT * FROM  %s WHERE Row_ID !=?" %(table_name)
-        cur.execute(q, (user_handle,))
-        rows = cur.fetchall()
-        if rows:
-            for row in rows:
-                yield row
-        else:
-            print("User handle not found!")
 
 
 # ax = DatabaseWorker("example")

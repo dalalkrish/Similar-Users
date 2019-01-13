@@ -39,7 +39,6 @@ class Users(Resource):
             print("Request receieved for user handle %s" %(user_id))
             ax = DatabaseWorker('users.db')
             data = ax.query_table('user_activity')
-            print(data.shape)
             similar_users, distance = similarity_matrix(data, int(user_id))
             print("Matrix calculation completed")
             data = data[data["user_handle"].isin(similar_users)]
@@ -51,7 +50,7 @@ class Users(Resource):
             return jsonify(response)
         except Exception as e:
             print(e)
-            return jsonify({'error-msg':'Please try another user handle'})
+            return jsonify({'error-msg':e})
 
 api.add_resource(Users, '/users/<user_id>')
 if __name__ == "__main__":
